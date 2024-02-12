@@ -62,8 +62,9 @@ class Calculator {
       case "C":
         this.processClearOperator();
         break;
-      case "=":
-        this.processEqualOperator();
+      case ">":
+        // this.processEqualOperator();
+        alert("Presença confirmada")
         break;
       default:
         return;
