@@ -73,7 +73,7 @@ body {
 }
 
 #buttons-container #equal-btn {
-  background-color: #75a5cb;
+  background-color: rgba(0, 255, 0, 0.5);
 }
 
 #buttons-container #equal-btn:hover {
