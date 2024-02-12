@@ -9,10 +9,7 @@ class Calculator {
     this.currentOperation = "";
   }
 
-  // add digit to calculator screen
   addDigit(digit) {
-    console.log(digit);
-    // Check if number already has a dot
     if (digit === "." && this.currentOperationText.innerText.includes(".")) {
       return;
     }
@@ -23,6 +20,7 @@ class Calculator {
 
   // process all calculator operations
   processOperation(operation) {
+    
     // Check if current value is empty
     if (this.currentOperationText.innerText === "" && operation !== "C") {
       // Change operation
@@ -36,6 +34,7 @@ class Calculator {
     let operationValue;
     let previous = +this.previousOperationText.innerText.split(" ")[0];
     let current = +this.currentOperationText.innerText;
+    
 
     switch (operation) {
       case "+":
@@ -54,7 +53,7 @@ class Calculator {
         operationValue = previous / current;
         this.updateScreen(operationValue, operation, current, previous);
         break;
-      case "DEL":
+      case "_":
         this.processDelOperator();
         break;
       case "CE":
